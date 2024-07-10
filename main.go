@@ -17,16 +17,16 @@ type Developer struct {
 var Developers []Developer
 
 func Start(writer http.ResponseWriter, request *http.Request) {
-	_, err := fmt.Fprintf(writer, "<h1>Hello World!</h1>")
+	_, err := fmt.Fprintf(writer, "<h1>Run /developer Endpoint</h1>")
 	if err != nil {
 		return
 	}
 	log.Print(request.RequestURI)
-	fmt.Println("Endpoint Developers: Setup ")
+	fmt.Println("Developer Endpoint: Start")
 }
 
 func returnAllDevelopers(writer http.ResponseWriter, request *http.Request) {
-	fmt.Println("Endpoint Developers: Get all Developers")
+	fmt.Println("Developer Endpoint: Get all Developers")
 	err := json.NewEncoder(writer).Encode(Developers)
 	if err != nil {
 		return
@@ -44,7 +44,7 @@ func handleRequests() {
 func main() {
 	Developers = []Developer{
 		Developer{JobDescription: "Solution Architect", FirstName: "Hakan", LastName: "Yedibela", Age: 38},
-		Developer{JobDescription: "Full-Stack", FirstName: "John", LastName: "Doe", Age: 22},
+		Developer{JobDescription: "Full-Stack Developer", FirstName: "John", LastName: "Doe", Age: 22},
 	}
 	handleRequests()
 }
