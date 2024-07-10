@@ -45,6 +45,8 @@ func main() {
 	Developers = []Developer{
 		Developer{JobDescription: "Solution Architect", FirstName: "Hakan", LastName: "Yedibela", Age: 38},
 		Developer{JobDescription: "Full-Stack Developer", FirstName: "John", LastName: "Doe", Age: 22},
+		{JobDescription: "DevOps Engineer", FirstName: "Peter", LastName: "Parker", Age: 23},
+		{JobDescription: "Cloud-Engineer", FirstName: "Bruce", LastName: "Banner", Age: 54},
 	}
 	handleRequests()
 }
