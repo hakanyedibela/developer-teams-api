@@ -31,6 +31,7 @@ func returnAllDevelopers(writer http.ResponseWriter, request *http.Request) {
 	if err != nil {
 		return
 	}
+	fmt.Println("Request: " + request.RequestURI)
 }
 
 func handleRequests() {
